@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error-dim": "#d73357",
+                        "secondary": "#ff7166",
+                        "tertiary": "#ff8762",
+                        "on-tertiary-fixed-variant": "#6e1c00",
+                        "primary": "#ff8f73",
+                        "on-error": "#490013",
+                        "on-primary-container": "#490b00",
+                        "surface-container": "#241615",
+                        "outline": "#83716f",
+                        "on-primary": "#5e1000",
+                        "secondary-fixed-dim": "#ffb0a7",
+                        "primary-dim": "#dc3300",
+                        "on-tertiary-fixed": "#340800",
+                        "on-background": "#fde6e3",
+                        "secondary-fixed": "#ffc3bd",
+                        "surface-container-high": "#2b1c1a",
+                        "error-container": "#a70138",
+                        "primary-fixed-dim": "#ff5c34",
+                        "on-surface": "#fde6e3",
+                        "surface-container-highest": "#322220",
+                        "tertiary-fixed-dim": "#ff7d55",
+                        "on-surface-variant": "#bba6a4",
+                        "surface-container-lowest": "#000000",
+                        "surface": "#160b0a",
+                        "on-primary-fixed": "#000000",
+                        "surface-dim": "#160b0a",
+                        "inverse-on-surface": "#615150",
+                        "inverse-surface": "#fff8f7",
+                        "outline-variant": "#544443",
+                        "surface-variant": "#322220",
+                        "surface-bright": "#3a2826",
+                        "background": "#160b0a",
+                        "primary-container": "#ff7856",
+                        "secondary-dim": "#db322f",
+                        "error": "#ff6e84",
+                        "on-primary-fixed-variant": "#5a0f00",
+                        "inverse-primary": "#b52900",
+                        "on-secondary-fixed": "#700007",
+                        "on-error-container": "#ffb2b9",
+                        "on-secondary-fixed-variant": "#a60010",
+                        "tertiary-dim": "#ff7348",
+                        "on-secondary-container": "#ffdbd7",
+                        "tertiary-container": "#fe6f42",
+                        "on-secondary": "#4a0003",
+                        "tertiary-fixed": "#ff9473",
+                        "primary-fixed": "#ff7856",
+                        "surface-tint": "#ff8f73",
+                        "on-tertiary-container": "#3d0b00",
+                        "on-tertiary": "#531300",
+                        "surface-container-low": "#1c100f",
+                        "secondary-container": "#a90111"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(36, 22, 21, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(84, 68, 67, 0.15);
+        }
+        .sun-ray-divider {
+            height: 1px;
+            background: radial-gradient(circle, #ff8f73 0%, rgba(255, 143, 115, 0) 70%);
+            width: 100%;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(22, 11, 10, 0) 0%, rgba(22, 11, 10, 1) 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 143, 115, 0.4);
+        }
+        .lineup-text-glow {
+            text-shadow: 0 0 30px rgba(255, 143, 115, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative h-[870px] w-full overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Outdoor sunrise party at SoundGarden" class="h-full w-full object-cover" data-alt="atmospheric beach party at sunrise with golden orange light rays filtering through palm trees and a soft misty horizon" src="events/wallpapertransition.png"/>
+<div class="hero-gradient absolute inset-0"></div>
+<!-- Sun Ray Effect -->
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+</div>
+<!-- Header (Floating) -->
+<nav class="relative z-20 flex items-center justify-between px-6 py-6 lg:px-20">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="font-headline text-xl font-bold tracking-tight text-white uppercase">SoundGarden</span>
+</div>
+<div class="flex gap-4">
+<button class="flex h-12 w-12 items-center justify-center rounded-full bg-surface-container-high/40 text-white backdrop-blur-md transition-all hover:bg-surface-container-highest">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+<button class="flex h-12 w-12 items-center justify-center rounded-full bg-surface-container-high/40 text-white backdrop-blur-md transition-all hover:bg-surface-container-highest">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+</nav>
+<div class="relative z-10 flex h-full flex-col justify-end px-6 pb-20 lg:px-20">
+<div class="max-w-4xl space-y-4">
+<p class="font-label text-sm font-semibold uppercase tracking-[0.2em] text-primary">SoundGarden AFTER Experience</p>
+<h1 class="font-headline text-7xl font-extrabold leading-[1.1] text-white lg:text-9xl text-glow italic">
+                    Transition
+                </h1>
+<div class="mt-8 flex flex-wrap gap-x-12 gap-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_today">calendar_today</span>
+<div class="flex flex-col">
+<span class="text-sm text-on-surface-variant font-medium">Fecha</span>
+<span class="font-bold text-white">Sábado 28 de Octubre</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<div class="flex flex-col">
+<span class="text-sm text-on-surface-variant font-medium">Hora</span>
+<span class="font-bold text-white">03:00h AM en adelante</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div class="flex flex-col">
+<span class="text-sm text-on-surface-variant font-medium">Ubicación</span>
+<span class="font-bold text-white">Colastine, Santa Fe</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content -->
+<main class="relative z-20 -mt-10 px-6 lg:px-20">
+<!-- Quick Ticket Card -->
+<div class="glass-card flex flex-col items-center justify-between gap-6 rounded-lg p-8 lg:flex-row shadow-2xl">
+<div class="flex flex-col gap-1">
+<span class="text-sm font-bold uppercase tracking-widest text-primary">Primeras Anticipadas</span>
+<h3 class="font-headline text-3xl font-bold text-white">$15.000 <span class="text-base font-normal text-on-surface-variant">ARS</span></h3>
+</div>
+<div class="flex w-full flex-col gap-4 lg:w-auto lg:flex-row">
+<button class="flex h-14 items-center justify-center gap-2 rounded-full border border-outline-variant px-8 font-bold text-white transition-all hover:bg-surface-container-highest">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+                    Ver detalles
+                </button>
+<button class="flex h-14 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-container px-12 font-bold text-on-primary-fixed shadow-[0_10px_30px_rgba(255,143,115,0.3)] transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+                    Comprar Entrada
+                </button>
+</div>
+</div>
+<!-- Sun Ray Divider -->
+<div class="sun-ray-divider my-24 opacity-30"></div>
+<!-- Lineup Section -->
+<section class="mb-32">
+<div class="mb-16 flex flex-col items-center text-center gap-2">
+<p class="font-label text-xs font-bold uppercase tracking-[0.3em] text-primary"></p>
+<h2 class="font-headline text-5xl font-extrabold text-white lg:text-7xl lineup-text-glow">Lineup</h2>
+<div class="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex flex-col items-center space-y-8 text-center">
+<h3 class="font-headline text-3xl font-bold text-white lg:text-4xl ">MARTZ</h3>
+<h3 class="font-headline text-3xl font-bold text-white lg:text-4xl ">FRANCO ZEHRIN</h3>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline text-3xl font-bold text-white lg:text-4xl">Augusto Charvey</h4>
+<span class="font-label text-lg font-medium text-on-surface-variant italic">b2b</span>
+<h4 class="font-headline text-3xl font-bold text-white lg:text-4xl">Tobías Toledo</h4>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline text-3xl font-bold text-white lg:text-4xl">Vale Fernandez</h4>
+<span class="font-label text-lg font-medium text-on-surface-variant italic">b2b</span>
+<h4 class="font-headline text-3xl font-bold text-white lg:text-4xl">Gero Ojeda</h4>
+</div>
+<h4 class="uppercase font-headline text-5xl font-black italic tracking-tighter text-white transition-all hover:text-primary lg:text-7xl uppercase">Mati Pistols</h4>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="mb-32">
+<div class="mb-16 grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
+<div>
+<h2 class="font-headline text-4xl font-bold text-white lg:text-5xl">The Garden Oasis</h2>
+<p class="mt-6 text-lg leading-relaxed text-on-surface-variant">
+                        Nos alejamos de la ciudad para conectar con la naturaleza. SoundGarden Colastine es un santuario rodeado de verde, diseñado para recibir los primeros rayos del sol frente al río.
+                    </p>
+<div class="mt-10 space-y-6">
+<div class="flex items-start gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined" data-icon="directions_car">directions_car</span>
+</div>
+<div>
+<h6 class="font-bold text-white">Parking Exclusivo</h6>
+<p class="text-sm text-on-surface-variant">Estacionamiento privado y seguridad las 24hs.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined" data-icon="local_bar">local_bar</span>
+</div>
+<div>
+<h6 class="font-bold text-white">Refreshment Bar</h6>
+<p class="text-sm text-on-surface-variant">Coctelería premium y opciones saludables.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-[500px] overflow-hidden rounded-lg shadow-2xl">
+<img alt="Dark map of Santa Fe location" class="h-full w-full object-cover opacity-60 grayscale brightness-50" data-alt="dark styled satellite map with minimal lines and glowing orange pin points on the riverside" data-location="Colastine, Santa Fe, Argentina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-xwUEiaDeSww6FoXaKnI8gUkYMbmBuMcXsh1XFpJTdNeAkYDAbMe9UTwWG-xqXGcGV56AEPZMHgL_S_7ANO_xyBSyDFhGjuEFu85rlS91I-vtHDR2c8-t_X8ArK2M2mQdx5-cdx1-4b9MuM29GW8CPO0ajhBs6t23FYbwKKiqytsuUJNaPELpYFepYhfo-JjYQfTifkfe9SpDqSSEhKwjKesK1BwV8tILJ2GnxczcAi_z03l1uHmghZOMRDjYVQoOslDtDq1xTZw"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<div class="absolute -inset-4 animate-ping rounded-full bg-primary/30"></div>
+<div class="relative flex h-16 w-16 items-center justify-center rounded-full bg-primary text-on-primary shadow-[0_0_30px_rgba(255,143,115,0.8)]">
+<span class="material-symbols-outlined text-3xl" data-icon="location_on">location_on</span>
+</div>
+</div>
+</div>
+<div class="absolute bottom-6 right-6">
+<button class="flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-black transition-transform hover:scale-105">
+                            Abrir en Google Maps
+                            <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="relative mb-32 overflow-hidden rounded-lg bg-gradient-to-br from-primary-container/20 to-surface-container-highest p-12 lg:p-24 text-center">
+<div class="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-primary/10 blur-[100px]"></div>
+<div class="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-tertiary/10 blur-[100px]"></div>
+<h2 class="relative z-10 font-headline text-5xl font-extrabold text-white lg:text-7xl">¿Listos para el amanecer?</h2>
+<p class="relative z-10 mx-auto mt-6 max-w-xl text-lg text-on-surface-variant">Cupos limitados. Asegura tu lugar en la experiencia más exclusiva de Santa Fe.</p>
+<div class="relative z-10 mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row">
+<button class="group flex h-16 w-full items-center justify-center gap-3 rounded-full bg-primary px-16 text-lg font-bold text-on-primary-fixed shadow-[0_15px_40px_rgba(255,143,115,0.4)] transition-all hover:-translate-y-1 sm:w-auto">
+                    Comprar Anticipada
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-outline-variant/10 bg-surface-container-low px-6 py-12 lg:px-20">
+<div class="flex flex-col items-center justify-between gap-8 lg:flex-row">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="font-headline font-bold uppercase tracking-tight text-white">SoundGarden</span>
+</div>
+<div class="flex gap-8 text-sm font-medium text-on-surface-variant">
+<a class="transition-colors hover:text-primary" href="#">Instagram</a>
+<a class="transition-colors hover:text-primary" href="#">Spotify</a>
+<a class="transition-colors hover:text-primary" href="#">Tickets</a>
+<a class="transition-colors hover:text-primary" href="#">Contacto</a>
+</div>
+<p class="text-xs text-outline">© 2026 Transition. All Rights Reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>

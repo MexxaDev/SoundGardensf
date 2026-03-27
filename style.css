@@ -1,0 +1,158 @@
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* LOGO */
+.logo {
+  font-weight: 800;
+  color: #ff8f73;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #120807, transparent);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.hero span {
+  color: #ff8f73;
+  font-style: italic;
+}
+
+/* BOTONES */
+.btn-primary {
+  background: #ff8f73;
+  color: black;
+  padding: 12px 26px;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(255,143,115,0.6);
+}
+
+.btn-glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 12px 26px;
+  border-radius: 999px;
+}
+
+.btn-outline {
+  border: 1px solid #ff8f73;
+  color: #ff8f73;
+  padding: 10px 20px;
+  border-radius: 999px;
+}
+
+/* SECCIONES */
+.section {
+  padding: 120px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 80px;
+}
+
+.card {
+  flex: 1;
+  padding: 30px;
+  border-radius: 20px;
+  background: #1e1210;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.highlight {
+  border: 1px solid #ff8f73;
+}
+
+/* EVENTOS */
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #1e1210;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.event:hover {
+  transform: translateX(10px);
+}
+
+/* COMMUNITY */
+.community {
+  padding: 140px 20px;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* ANIMACIONES */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
