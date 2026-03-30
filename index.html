@@ -1,423 +1,500 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SoundGarden | Donde el amanecer nos encuentra bailando</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "outline-variant": "#544443",
-              "surface-variant": "#322220",
-              "tertiary-fixed": "#ff9473",
-              "inverse-primary": "#b52900",
-              "on-primary-fixed": "#000000",
-              "secondary-fixed-dim": "#ffb0a7",
-              "on-error-container": "#ffb2b9",
-              "inverse-surface": "#fff8f7",
-              "on-surface-variant": "#bba6a4",
-              "tertiary-container": "#fe6f42",
-              "primary-dim": "#dc3300",
-              "on-primary-container": "#490b00",
-              "on-secondary": "#4a0003",
-              "surface-container-lowest": "#000000",
-              "on-tertiary-container": "#3d0b00",
-              "surface-container-highest": "#322220",
-              "primary-container": "#ff7856",
-              "secondary-container": "#a90111",
-              "surface-container-high": "#2b1c1a",
-              "surface-tint": "#ff8f73",
-              "on-secondary-fixed-variant": "#a60010",
-              "background": "#160b0a",
-              "tertiary-dim": "#ff7348",
-              "primary": "#ff8f73",
-              "surface-bright": "#3a2826",
-              "secondary": "#ff7166",
-              "on-tertiary": "#531300",
-              "secondary-dim": "#db322f",
-              "surface-container-low": "#1c100f",
-              "surface-container": "#241615",
-              "on-primary": "#5e1000",
-              "inverse-on-surface": "#615150",
-              "on-secondary-fixed": "#700007",
-              "primary-fixed": "#ff7856",
-              "on-background": "#fde6e3",
-              "error": "#ff6e84",
-              "outline": "#83716f",
-              "error-dim": "#d73357",
-              "surface": "#160b0a",
-              "on-tertiary-fixed-variant": "#6e1c00",
-              "tertiary-fixed-dim": "#ff7d55",
-              "tertiary": "#ff8762",
-              "on-secondary-container": "#ffdbd7",
-              "on-primary-fixed-variant": "#5a0f00",
-              "on-error": "#490013",
-              "primary-fixed-dim": "#ff5c34",
-              "secondary-fixed": "#ffc3bd",
-              "on-tertiary-fixed": "#340800",
-              "surface-dim": "#160b0a",
-              "error-container": "#a70138",
-              "on-surface": "#fde6e3"
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SoundGarden | Donde el amanecer nos encuentra bailando</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#544443",
+                        "surface-variant": "#322220",
+                        "tertiary-fixed": "#ff9473",
+                        "inverse-primary": "#b52900",
+                        "on-primary-fixed": "#000000",
+                        "secondary-fixed-dim": "#ffb0a7",
+                        "on-error-container": "#ffb2b9",
+                        "inverse-surface": "#fff8f7",
+                        "on-surface-variant": "#bba6a4",
+                        "tertiary-container": "#fe6f42",
+                        "primary-dim": "#dc3300",
+                        "on-primary-container": "#490b00",
+                        "on-secondary": "#4a0003",
+                        "surface-container-lowest": "#000000",
+                        "on-tertiary-container": "#3d0b00",
+                        "surface-container-highest": "#322220",
+                        "primary-container": "#ff7856",
+                        "secondary-container": "#a90111",
+                        "surface-container-high": "#2b1c1a",
+                        "surface-tint": "#ff8f73",
+                        "on-secondary-fixed-variant": "#a60010",
+                        "background": "#160b0a",
+                        "tertiary-dim": "#ff7348",
+                        "primary": "#ff8f73",
+                        "surface-bright": "#3a2826",
+                        "secondary": "#ff7166",
+                        "on-tertiary": "#531300",
+                        "secondary-dim": "#db322f",
+                        "surface-container-low": "#1c100f",
+                        "surface-container": "#241615",
+                        "on-primary": "#5e1000",
+                        "inverse-on-surface": "#615150",
+                        "on-secondary-fixed": "#700007",
+                        "primary-fixed": "#ff7856",
+                        "on-background": "#fde6e3",
+                        "error": "#ff6e84",
+                        "outline": "#83716f",
+                        "error-dim": "#d73357",
+                        "surface": "#160b0a",
+                        "on-tertiary-fixed-variant": "#6e1c00",
+                        "tertiary-fixed-dim": "#ff7d55",
+                        "tertiary": "#ff8762",
+                        "on-secondary-container": "#ffdbd7",
+                        "on-primary-fixed-variant": "#5a0f00",
+                        "on-error": "#490013",
+                        "primary-fixed-dim": "#ff5c34",
+                        "secondary-fixed": "#ffc3bd",
+                        "on-tertiary-fixed": "#340800",
+                        "surface-dim": "#160b0a",
+                        "error-container": "#a70138",
+                        "on-surface": "#fde6e3"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
             },
-            fontFamily: {
-              "headline": ["Plus Jakarta Sans"],
-              "body": ["Manrope"],
-              "label": ["Manrope"]
-            },
-            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .glass-nav {
             background: rgba(22, 11, 10, 0.7);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(84, 68, 67, 0.2);
         }
+
         .sunrise-gradient {
             background: radial-gradient(circle at 50% 100%, #ff8f73 0%, #dc3300 30%, #160b0a 100%);
         }
+
         .sun-ray-divider {
             height: 1px;
             background: linear-gradient(90deg, transparent, #ff8f73 50%, transparent);
             opacity: 0.3;
         }
+
         .glow-button {
             box-shadow: 0 0 20px rgba(255, 143, 115, 0.3);
         }
+
         .glow-button:hover {
             box-shadow: 0 0 35px rgba(255, 143, 115, 0.5);
         }
     </style>
 </head>
+
 <body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
-<!-- Shared Header (Integrated and modified for style context but strictly immutable structure where applicable) -->
-<header class="fixed top-0 left-0 right-0 z-50 glass-nav">
-<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 text-primary">
-<img src="LOGO2.png" alt="">
-<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-<h1 class="font-headline font-bold text-xl tracking-tight">SoundGarden</h1>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#experiencia">Experiencia</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#eventos">Eventos</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#comunidad">Comunidad</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#sponsors">Sponsors</a>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold text-sm glow-button transition-all">
+    <!-- Shared Header (Integrated and modified for style context but strictly immutable structure where applicable) -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 text-primary">
+                    <img src="LOGO2.png" alt="">
+                    <path clip-rule="evenodd"
+                        d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+                        fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h1 class="font-headline font-bold text-xl tracking-tight">SoundGarden</h1>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#experiencia">Experiencia</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#eventos">Eventos</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#comunidad">Comunidad</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#sponsors">Sponsors</a>
+                <button
+                    class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold text-sm glow-button transition-all">
                     Ver próximos eventos
                 </button>
-</nav>
-</div>
-</header>
-<!-- 1. Hero Section -->
-<section class="relative min-h-screen flex flex-col items-center justify-center sunrise-gradient px-6 pt-20">
-<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHExwJrWHE6kwo27wFy_rHRUdOMGq03Nn2syh9GQZAmY-nB_MY6_Gj9LRLruW-VJzE6dtnewd3ffuWsC5asPF263fhXXfSV8cvbiwFbnvqXzWb6uhxrFa5yp95_cixNCJ4r82G6n1WnBkvTmqRvMj64Ig4v60pNjkx6ic4niphMX5EfTIo8wcUn_-NsZNB5MkZjD4eVQLmzMZif4R38u1Qb4zkLstnwxoVbhcGydIM6fgpIGRL7g86dhLf4uRdNrv2yNDazQiU_H4');"></div>
-<div class="relative z-10 flex flex-col items-center text-center max-w-4xl">
-<div class="mb-12 w-32 h-32 md:w-48 md:h-48 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center animate-pulse">
-<div class="w-20 h-20 md:w-32 md:h-32 text-primary">
-  <img src="LOGO2.png" width="700px" height="700px">
-</div>
-</div>
-<h1 class="font-headline font-extrabold text-5xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tight mb-6">
+            </nav>
+        </div>
+    </header>
+    <!-- 1. Hero Section -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center sunrise-gradient px-6 pt-20">
+        <div class="absolute inset-0 opacity-20 pointer-events-none"
+            style="background-image: url('events/calmwallpaper.png');">
+        </div>
+        <div class="relative z-10 flex flex-col items-center text-center max-w-4xl">
+            <div
+                class="mb-12 w-32 h-32 md:w-48 md:h-48 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center animate-pulse">
+                <div class="w-20 h-20 md:w-32 md:h-32 text-primary">
+                    <img src="LOGO2.png" width="700px" height="700px">
+                </div>
+            </div>
+            <h1
+                class="font-headline font-extrabold text-5xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tight mb-6">
                 Donde el amanecer nos encuentra bailando
             </h1>
-<p class="font-body text-xl md:text-2xl text-on-surface-variant font-medium mb-10 max-w-2xl opacity-90">
+            <p class="font-body text-xl md:text-2xl text-on-surface-variant font-medium mb-10 max-w-2xl opacity-90">
                 Experiencias electrónicas que trascienden la noche.
             </p>
-<div class="flex flex-col sm:flex-row gap-4 items-center">
-<button class="bg-primary text-on-primary px-10 py-5 rounded-full font-bold text-lg glow-button transition-transform hover:scale-105">
+            <div class="flex flex-col sm:flex-row gap-4 items-center">
+                <button
+                    class="bg-primary text-on-primary px-10 py-5 rounded-full font-bold text-lg glow-button transition-transform hover:scale-105">
                     Ver próximos eventos
                 </button>
-<button class="bg-surface-variant/30 backdrop-blur-md border border-white/10 text-white px-10 py-5 rounded-full font-bold text-lg transition-all hover:bg-surface-variant/50">
+                <button
+                    class="bg-surface-variant/30 backdrop-blur-md border border-white/10 text-white px-10 py-5 rounded-full font-bold text-lg transition-all hover:bg-surface-variant/50">
                     Nuestra historia
                 </button>
-</div>
-</div>
-<!-- Sun decoration -->
-<div class="absolute bottom-[-100px] w-[500px] h-[500px] bg-primary rounded-full blur-[150px] opacity-20 -z-10"></div>
-</section>
-<!-- 2. About Section -->
-<section class="py-24 md:py-40 px-6 relative overflow-hidden bg-background">
-<div class="max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
-<div class="flex-1 space-y-8">
-<h2 class="font-headline font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight text-white">
+            </div>
+        </div>
+        <!-- Sun decoration -->
+        <div class="absolute bottom-[-100px] w-[500px] h-[500px] bg-primary rounded-full blur-[150px] opacity-20 -z-10">
+        </div>
+    </section>
+    <!-- 2. About Section -->
+    <section class="py-24 md:py-40 px-6 relative overflow-hidden bg-background">
+        <div class="max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
+            <div class="flex-1 space-y-8">
+                <h2 class="font-headline font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight text-white">
                     ¿Qué es SoundGarden?
                 </h2>
-<div class="w-24 h-1 bg-primary rounded-full"></div>
-<p class="font-body text-lg md:text-xl leading-relaxed text-on-surface-variant">
-                    SoundGarden es una productora de eventos de música electrónica enfocada en crear experiencias únicas durante el after. Un espacio donde la música, la energía y las personas se conectan mientras el sol comienza a salir. No es solo una fiesta, es un momento.
+                <div class="w-24 h-1 bg-primary rounded-full"></div>
+                <p class="font-body text-lg md:text-xl leading-relaxed text-on-surface-variant">
+                    SoundGarden es una productora de eventos de música electrónica enfocada en crear experiencias únicas
+                    durante el after. Un espacio donde la música, la energía y las personas se conectan mientras el sol
+                    comienza a salir. No es solo una fiesta, es un momento.
                 </p>
-<div class="flex gap-12 pt-4">
-<div>
-<span class="block text-4xl font-headline font-bold text-primary">24/7</span>
-<span class="text-sm text-on-surface-variant uppercase tracking-widest">Energía</span>
-</div>
-<div>
-<span class="block text-4xl font-headline font-bold text-primary">+15</span>
-<span class="text-sm text-on-surface-variant uppercase tracking-widest">Eventos</span>
-</div>
-<div>
-<span class="block text-4xl font-headline font-bold text-primary">100%</span>
-<span class="text-sm text-on-surface-variant uppercase tracking-widest">Auténtico</span>
-</div>
-</div>
-</div>
-<div class="flex-1 relative">
-<div class="relative z-10 rounded-xl overflow-hidden shadow-2xl rotate-3 transition-transform hover:rotate-0 duration-500 aspect-square max-w-md ml-auto">
-<img alt="SoundGarden experience" class="w-full h-full object-cover" data-alt="Cinematic shot of a crowd at a music festival dancing as the sun rises, warm orange light illuminating silhouettes and smoke" src="SoundGardenlogo.png"/>
-</div>
-<div class="absolute top-10 right-10 w-full h-full border-2 border-primary/20 rounded-xl -rotate-3 -z-10"></div>
-</div>
-</div>
-</section>
-<div class="sun-ray-divider"></div>
-<!-- 3. Experience Section -->
-<section class="py-24 md:py-40 px-6 bg-surface-container-lowest" id="experiencia">
-<div class="max-w-[1280px] mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-20 space-y-6">
-<h2 class="font-headline font-bold text-4xl md:text-5xl tracking-tight text-white">La Experiencia</h2>
-<p class="font-body text-lg md:text-xl text-on-surface-variant">
-                    Cada evento está diseñado para que vivas algo distinto. Desde el sonido hasta el ambiente, todo está pensado para acompañar ese momento mágico entre la noche y el día.
+                <div class="flex gap-12 pt-4">
+                    <div>
+                        <span class="block text-4xl font-headline font-bold text-primary">24/7</span>
+                        <span class="text-sm text-on-surface-variant uppercase tracking-widest">Energía</span>
+                    </div>
+                    <div>
+                        <span class="block text-4xl font-headline font-bold text-primary">+15</span>
+                        <span class="text-sm text-on-surface-variant uppercase tracking-widest">Eventos</span>
+                    </div>
+                    <div>
+                        <span class="block text-4xl font-headline font-bold text-primary">100%</span>
+                        <span class="text-sm text-on-surface-variant uppercase tracking-widest">Auténtico</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 relative">
+                <div
+                    class="relative z-10 rounded-xl overflow-hidden shadow-2xl rotate-3 transition-transform hover:rotate-0 duration-500 aspect-square max-w-md ml-auto">
+                    <img alt="SoundGarden experience" class="w-full h-full object-cover"
+                        data-alt="Cinematic shot of a crowd at a music festival dancing as the sun rises, warm orange light illuminating silhouettes and smoke"
+                        src="SoundGardenlogo.png" />
+                </div>
+                <div
+                    class="absolute top-10 right-10 w-full h-full border-2 border-primary/20 rounded-xl -rotate-3 -z-10">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="sun-ray-divider"></div>
+    <!-- 3. Experience Section -->
+    <section class="py-24 md:py-40 px-6 bg-surface-container-lowest" id="experiencia">
+        <div class="max-w-[1280px] mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-6">
+                <h2 class="font-headline font-bold text-4xl md:text-5xl tracking-tight text-white">La Experiencia</h2>
+                <p class="font-body text-lg md:text-xl text-on-surface-variant">
+                    Cada evento está diseñado para que vivas algo distinto. Desde el sonido hasta el ambiente, todo está
+                    pensado para acompañar ese momento mágico entre la noche y el día.
                 </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-<!-- Card 1 -->
-<div class="bg-surface-container rounded-lg p-8 border border-outline-variant/10 hover:border-primary/40 transition-all group flex flex-col items-center text-center">
-<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl" data-icon="sunny">sunny</span>
-</div>
-<h3 class="font-headline font-bold text-xl mb-3">Amanecer + música</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">El ritmo que saluda al sol en perfecta sincronía.</p>
-</div>
-<!-- Card 2 -->
-<div class="bg-surface-container rounded-lg p-8 border border-outline-variant/10 hover:border-primary/40 transition-all group flex flex-col items-center text-center">
-<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl" data-icon="park">park</span>
-</div>
-<h3 class="font-headline font-bold text-xl mb-3">Naturaleza</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Espacios orgánicos que respiran con cada beat.</p>
-</div>
-<!-- Card 3 -->
-<div class="bg-surface-container rounded-lg p-8 border border-outline-variant/10 hover:border-primary/40 transition-all group flex flex-col items-center text-center">
-<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl" data-icon="headset">headset</span>
-</div>
-<h3 class="font-headline font-bold text-xl mb-3">DJs en vivo</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Curaduría musical de clase mundial para almas exigentes.</p>
-</div>
-<!-- Card 4 -->
-<div class="bg-surface-container rounded-lg p-8 border border-outline-variant/10 hover:border-primary/40 transition-all group flex flex-col items-center text-center">
-<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl" data-icon="group">group</span>
-</div>
-<h3 class="font-headline font-bold text-xl mb-3">Comunidad</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Personas que comparten la misma pasión por el after.</p>
-</div>
-<!-- Card 5 -->
-<div class="bg-surface-container rounded-lg p-8 border border-outline-variant/10 hover:border-primary/40 transition-all group flex flex-col items-center text-center">
-<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl" data-icon="bolt">bolt</span>
-</div>
-<h3 class="font-headline font-bold text-xl mb-3">Energía real</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed">Vibras auténticas en un entorno sin pretensiones.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- 4. Events Section -->
-<section class="py-24 md:py-40 px-6" id="eventos">
-<div class="max-w-[1280px] mx-auto">
-<div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
-<div>
-<h2 class="font-headline font-bold text-4xl md:text-5xl tracking-tight text-white mb-4">Próximos eventos</h2>
-<p class="font-body text-on-surface-variant max-w-xl">Asegura tu lugar en las próximas experiencias SoundGarden. Cupos limitados para mantener la intimidad del momento.</p>
-</div>
-<a class="text-primary font-bold flex items-center gap-2 group" href="#">
-                    Ver todos <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Event 1 -->
-<div class="bg-surface-container-low rounded-lg overflow-hidden group hover:bg-surface-container transition-colors shadow-lg">
-<div class="h-64 overflow-hidden relative">
-<img alt="Sunrise Afterparty" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Abstract colorful stage lights in a dense club atmosphere with beams of red and orange light cutting through smoke" src="events/Evento_Transition.png"/>
-<div class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Últimos Tickets</div>
-</div>
-<div class="p-8">
-  <a href="transition_event.html">
-<div class="flex items-center gap-4 text-primary text-sm font-bold mb-4">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span> 28 SAB</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-lg" data-icon="location_on">location_on</span> Colastine, SF</span>
-</div>
-<h3 class="font-headline font-bold text-2xl mb-4 text-white">Transition</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed mb-8">After POST CINEMA Club</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-surface-container rounded-lg p-8 border border-outline-variant/10 hover:border-primary/40 transition-all group flex flex-col items-center text-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl" data-icon="sunny">sunny</span>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl mb-3">Amanecer + música</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">El ritmo que saluda al sol en perfecta
+                        sincronía.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-surface-container rounded-lg p-8 border border-outline-variant/10 hover:border-primary/40 transition-all group flex flex-col items-center text-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl" data-icon="park">park</span>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl mb-3">Naturaleza</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Espacios orgánicos que respiran con cada
+                        beat.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-surface-container rounded-lg p-8 border border-outline-variant/10 hover:border-primary/40 transition-all group flex flex-col items-center text-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl" data-icon="headset">headset</span>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl mb-3">DJs en vivo</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Curaduría musical de clase mundial para
+                        almas exigentes.</p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="bg-surface-container rounded-lg p-8 border border-outline-variant/10 hover:border-primary/40 transition-all group flex flex-col items-center text-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl" data-icon="group">group</span>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl mb-3">Comunidad</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Personas que comparten la misma pasión
+                        por el after.</p>
+                </div>
+                <!-- Card 5 -->
+                <div
+                    class="bg-surface-container rounded-lg p-8 border border-outline-variant/10 hover:border-primary/40 transition-all group flex flex-col items-center text-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl" data-icon="bolt">bolt</span>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl mb-3">Energía real</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Vibras auténticas en un entorno sin
+                        pretensiones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 4. Events Section -->
+    <section class="py-24 md:py-40 px-6" id="eventos">
+        <div class="max-w-[1280px] mx-auto">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="font-headline font-bold text-4xl md:text-5xl tracking-tight text-white mb-4">Próximos
+                        eventos</h2>
+                    <p class="font-body text-on-surface-variant max-w-xl">Asegura tu lugar en las próximas experiencias
+                        SoundGarden. Cupos limitados para mantener la intimidad del momento.</p>
+                </div>
+                <a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                    Ver todos <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                        data-icon="arrow_forward">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event 1 -->
 
-  <button  class="w-full py-4 border border-outline hover:border-primary hover:bg-primary hover:text-on-primary transition-all font-bold rounded-lg flex items-center justify-center gap-2" ><a href="transition_event.html">Más info</a>
-                             <span class="material-symbols-outlined text-lg" data-icon="local_activity">local_activity</span>
-</button>
-</a>
+                <!-- Event 2 -->
+                <div
+                    class="bg-surface-container-low rounded-lg overflow-hidden group hover:bg-surface-container transition-colors shadow-lg">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Forest After"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="Dreamy outdoor party setting in a lush forest clearing with soft warm lights strung between trees and dancers in the morning mist"
+                            src="events/calmwallpaper.png" />
+                    </div>
+                    <div class="p-8">
+                        <a href="calm_event.html"><div class="flex items-center gap-4 text-primary text-sm font-bold mb-4">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-lg"
+                                    data-icon="calendar_today">calendar_today</span> 28 MAY</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-lg"
+                                    data-icon="location_on">location_on</span> Colastine, Santa Fe</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-2xl mb-4 text-white">CALM</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-8">La calma de la naturaleza se
+                            fusiona con el lugar, creando una experiencia para disfrutar.</p>
+                        <button
+                            class="w-full py-4 border border-outline hover:border-primary hover:bg-primary hover:text-on-primary transition-all font-bold rounded-lg flex items-center justify-center gap-2">
+                            Más info <span class="material-symbols-outlined text-lg"
+                                data-icon="local_activity">local_activity</span>
+                        </button>
+                    </div></a>
+                </div>
 
-</div>
-</div>
-<!-- Event 2 -->
-<div class="bg-surface-container-low rounded-lg overflow-hidden group hover:bg-surface-container transition-colors shadow-lg">
-<div class="h-64 overflow-hidden relative">
-<img alt="Forest After" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Dreamy outdoor party setting in a lush forest clearing with soft warm lights strung between trees and dancers in the morning mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD705NXTNCw_SKfTG5lqMDwZfRVtYfHTYG1mgbqbFjZOwvfZ_P30KfPyKqdiSthrsT4z0MaQQvBr9d2reET4dvmdv57nCAj1Sm3ta0aaDlN8KhLrvGzCFoj8UEeraaiahzfUt9OxuowzJcKaSKv1iCs42hOeFslqtTUGCBUsVpr7WE7F_Flci9MN-k8IRQMqkL4aeMaZAVLugQ2A5sWhQMgZSIwBDal_Tr7n1AuSM9BCJuij2vNJIzm1CissN5Qwx90sziHkCqlYa4"/>
-</div>
-<div class="p-8">
-<div class="flex items-center gap-4 text-primary text-sm font-bold mb-4">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span> 28 MAY</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-lg" data-icon="location_on">location_on</span> Santa Fe, Cap</span>
-</div>
-<h3 class="font-headline font-bold text-2xl mb-4 text-white">Organic Beats Session</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Naturaleza y tecnología se unen. Sonido inmersivo 360 en locación secreta.</p>
-<button class="w-full py-4 border border-outline hover:border-primary hover:bg-primary hover:text-on-primary transition-all font-bold rounded-lg flex items-center justify-center gap-2">
-                            Más info <span class="material-symbols-outlined text-lg" data-icon="local_activity">local_activity</span>
-</button>
-</div>
-</div>
-<!-- Event 3 -->
-<div class="bg-surface-container-low rounded-lg overflow-hidden group hover:bg-surface-container transition-colors shadow-lg">
-<div class="h-64 overflow-hidden relative">
-<img alt="Secret Garden Party" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Wide shot of a sophisticated outdoor DJ booth at dawn with high-end audio equipment and a backdrop of modern architectural structures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCXAuxskmFck0tj8rhw3KlDbW6SqXcEaPUD63-xVTWqgtOSTIxlkCPeMDbhOfjP3sMzVqX4Hg5_nQd5bgog7IFve_J11GHf8LRubRDo0mU_o12it3l4lBUtNmHxJrWddWqFVdzgRZuUoai3OpCylADwDH1z6O55z7mTr1dCHiE3gKbGNp2VB6mAca64mnqfVEp6VNv_41CUEjK-77y1cBmPvH2XmON3mMF4tojieH28GwHMw8EPJEhc5stEfMLdrKu2hM7e68O3ps"/>
-</div>
-<div class="p-8">
-<div class="flex items-center gap-4 text-primary text-sm font-bold mb-4">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span> 12 JUN</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-lg" data-icon="location_on">location_on</span> Rosario, SF</span>
-</div>
-<h3 class="font-headline font-bold text-2xl mb-4 text-white">Techno Morning Glow</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed mb-8">El lado más profundo de la electrónica industrial suavizado por el primer rayo de luz.</p>
-<button class="w-full py-4 border border-outline hover:border-primary hover:bg-primary hover:text-on-primary transition-all font-bold rounded-lg flex items-center justify-center gap-2">
-                            Más info <span class="material-symbols-outlined text-lg" data-icon="local_activity">local_activity</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 5. Community Section -->
-<section class="py-24 md:py-40 px-6 bg-surface-container-high relative overflow-hidden" id="comunidad">
-<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
-<div class="max-w-[1280px] mx-auto relative z-10 flex flex-col md:flex-row items-center gap-16">
-<div class="md:w-1/2">
-<h2 class="font-headline font-bold text-4xl md:text-5xl tracking-tight text-white mb-6">Sé parte</h2>
-<p class="font-body text-lg md:text-xl text-on-surface-variant mb-10 leading-relaxed">
-                    SoundGarden es una comunidad en crecimiento. Personas que buscan algo más que salir, buscan sentir. Compartí tus fotos, enterate de preventas exclusivas y conocé a otros apasionados por el amanecer.
+                <div
+                    class="bg-surface-container-low rounded-lg overflow-hidden group hover:bg-surface-container transition-colors shadow-lg">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Sunrise Afterparty"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="Abstract colorful stage lights in a dense club atmosphere with beams of red and orange light cutting through smoke"
+                            src="events/Evento_Transition.png" />
+<!--                         <div
+                            class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                            Últimos Tickets</div> -->
+                    </div>
+                    <div class="p-8">
+                        <a href="transition_event.html">
+                            <div class="flex items-center gap-4 text-primary text-sm font-bold mb-4">
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-lg"
+                                        data-icon="calendar_today">calendar_today</span> 28 SAB</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-lg"
+                                        data-icon="location_on">location_on</span> Colastine, SF</span>
+                            </div>
+                            <h3 class="font-headline font-bold text-2xl mb-4 text-white">Transition</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed mb-8">After POST CINEMA Club</p>
+
+                            <button
+                                class="w-full py-4 border border-outline hover:border-primary hover:bg-primary hover:text-on-primary transition-all font-bold rounded-lg flex items-center justify-center gap-2"><a
+                                    href="transition_event.html">Más info</a>
+                                <span class="material-symbols-outlined text-lg"
+                                    data-icon="local_activity">local_activity</span>
+                            </button>
+                        </a>
+
+                    </div>
+                </div>
+                <!-- Event 3 -->
+            </div>
+        </div>
+    </section>
+    <!-- 5. Community Section -->
+    <section class="py-24 md:py-40 px-6 bg-surface-container-high relative overflow-hidden" id="comunidad">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+        <div class="max-w-[1280px] mx-auto relative z-10 flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2">
+                <h2 class="font-headline font-bold text-4xl md:text-5xl tracking-tight text-white mb-6">Sé parte</h2>
+                <p class="font-body text-lg md:text-xl text-on-surface-variant mb-10 leading-relaxed">
+                    SoundGarden es una comunidad en crecimiento. Personas que buscan algo más que salir, buscan sentir.
+                    Compartí tus fotos, enterate de preventas exclusivas y conocé a otros apasionados por el amanecer.
                 </p>
-<div class="flex flex-wrap gap-4">
-  <a href="https://chat.whatsapp.com/GuzreHXo1Fq7jn2fE26njT?mode=gi_t"><button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold transition-all glow-button flex items-center gap-3">
-                        Sumate a la comunidad <span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
-</button></a>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://chat.whatsapp.com/GuzreHXo1Fq7jn2fE26njT?mode=gi_t"><button
+                            class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold transition-all glow-button flex items-center gap-3">
+                            Sumate a la comunidad <span class="material-symbols-outlined" data-icon="favorite"
+                                style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </button></a>
 
-<a href="https://www.instagram.com/soundgarden.sf/" ><button class="bg-white/5 border border-white/10 px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-white/10 transition-all">
-                        Seguinos en redes <span class="material-symbols-outlined" data-icon="share">share</span>
-</button></a>
+                    <a href="https://www.instagram.com/soundgarden.sf/"><button
+                            class="bg-white/5 border border-white/10 px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-white/10 transition-all">
+                            Seguinos en redes <span class="material-symbols-outlined" data-icon="share">share</span>
+                        </button></a>
 
-</div>
-</div>
-<div class="md:w-1/2 grid grid-cols-2 gap-4">
-<img alt="Community 1" class="rounded-lg shadow-xl" data-alt="Tightly cropped shot of a group of friends laughing and embracing in the warm early morning light of an outdoor party" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5fabCIf3cTeY0hSGZo33bmDCkOpIz0Crs6WUNjb4aLy-FSZwguVXl8P350pGtGTObKkzg65euks7RUM378dFCUcL6JjLfO-v1fw9sTFB74Zzv60POHtx8ulqO4zv-7F2o6-GmTJDQWa6mYo9JTeI6mTwb9vq05JT3XHSUvgQpVK81CtmEN3n2coqsm-ap2dt0xJwqf_NgF4BqZw9p8qgvkBf7TG058XFT5UrGaB_gC4p51Gg_8O0KXMvq8nbYCcV2vGTFwktj5gI"/>
-<img alt="Community 2" class="rounded-lg shadow-xl mt-8" data-alt="Dynamic shot of a person with colorful makeup dancing with eyes closed, bathed in soft glowing orange sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ3bL7HpBZEa9YKL5g2rhrc_jJTcd2jx_8TgFbupdt-ebB1zkYPr17iH-YiVTgxv8DUnezGGADIYnP8vaW5VGIvYbU5A2ozMGoyq4BYrfzqbhUVGtu9Qvk4tko8KS3sd51ygqY1YXJa6MrZsDxWQjO0UOZSkcechWdzg439kkEk7Y_54UEUrmeewv0_Ht8rgbGDRDeRdXCqlgm6JkMa7S4n152oWBktyGWu4PCoksMq9T4Hf-JQVfPUQHRQWrPu5O5ocFZaF00guU"/>
-</div>
-</div>
-</section>
-<!-- 6. Sponsors Section -->
-<section class="py-24 md:py-32 px-6" id="sponsors">
-<div class="max-w-[1280px] mx-auto text-center">
-<h2 class="font-headline font-bold text-3xl md:text-4xl tracking-tight text-white mb-6">Sponsors &amp; Partners</h2>
-<p class="font-body text-on-surface-variant max-w-2xl mx-auto mb-16">
+                </div>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <img alt="Community 1" class="rounded-lg shadow-xl"
+                    data-alt="Tightly cropped shot of a group of friends laughing and embracing in the warm early morning light of an outdoor party"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5fabCIf3cTeY0hSGZo33bmDCkOpIz0Crs6WUNjb4aLy-FSZwguVXl8P350pGtGTObKkzg65euks7RUM378dFCUcL6JjLfO-v1fw9sTFB74Zzv60POHtx8ulqO4zv-7F2o6-GmTJDQWa6mYo9JTeI6mTwb9vq05JT3XHSUvgQpVK81CtmEN3n2coqsm-ap2dt0xJwqf_NgF4BqZw9p8qgvkBf7TG058XFT5UrGaB_gC4p51Gg_8O0KXMvq8nbYCcV2vGTFwktj5gI" />
+                <img alt="Community 2" class="rounded-lg shadow-xl mt-8"
+                    data-alt="Dynamic shot of a person with colorful makeup dancing with eyes closed, bathed in soft glowing orange sunlight"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ3bL7HpBZEa9YKL5g2rhrc_jJTcd2jx_8TgFbupdt-ebB1zkYPr17iH-YiVTgxv8DUnezGGADIYnP8vaW5VGIvYbU5A2ozMGoyq4BYrfzqbhUVGtu9Qvk4tko8KS3sd51ygqY1YXJa6MrZsDxWQjO0UOZSkcechWdzg439kkEk7Y_54UEUrmeewv0_Ht8rgbGDRDeRdXCqlgm6JkMa7S4n152oWBktyGWu4PCoksMq9T4Hf-JQVfPUQHRQWrPu5O5ocFZaF00guU" />
+            </div>
+        </div>
+    </section>
+    <!-- 6. Sponsors Section -->
+    <section class="py-24 md:py-32 px-6" id="sponsors">
+        <div class="max-w-[1280px] mx-auto text-center">
+            <h2 class="font-headline font-bold text-3xl md:text-4xl tracking-tight text-white mb-6">Sponsors &amp;
+                Partners</h2>
+            <p class="font-body text-on-surface-variant max-w-2xl mx-auto mb-16">
                 Trabajamos con marcas que buscan conectar con experiencias reales y auténticas.
             </p>
-<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all">
-<div class="h-12 w-32 bg-on-surface-variant/20 rounded-md"></div>
-<div class="h-12 w-32 bg-on-surface-variant/20 rounded-md"></div>
-<div class="h-12 w-32 bg-on-surface-variant/20 rounded-md"></div>
-<div class="h-12 w-32 bg-on-surface-variant/20 rounded-md"></div>
-<div class="h-12 w-32 bg-on-surface-variant/20 rounded-md"></div>
-</div>
-<button class="mt-20 text-primary font-bold border-b-2 border-primary/30 hover:border-primary transition-all pb-1 inline-flex items-center gap-2">
-                Quiero ser sponsor <span class="material-symbols-outlined text-lg" data-icon="handshake">handshake</span>
-</button>
-</div>
-</section>
-<!-- 7. Footer Section -->
-<footer class="bg-surface-container-low pt-24 pb-12 px-6">
-<div class="max-w-[1280px] mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
-<div class="col-span-1 md:col-span-2 space-y-8">
-<div class="flex items-center gap-3 text-primary">
-<div class="w-10 h-10">
-<img src="LOGO2.png" alt="">
-<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-<h2 class="font-headline font-bold text-2xl tracking-tight text-white">SoundGarden</h2>
-</div>
-<p class="font-body text-on-surface-variant max-w-sm">
-                        Producción de eventos de música electrónica enfocada en el after. La conexión entre la música y el primer rayo de sol.
+            <div
+                class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all">
+                <div class="h-12 w-32 bg-on-surface-variant/20 rounded-md"></div>
+                <div class="h-12 w-32 bg-on-surface-variant/20 rounded-md"></div>
+                <div class="h-12 w-32 bg-on-surface-variant/20 rounded-md"></div>
+                <div class="h-12 w-32 bg-on-surface-variant/20 rounded-md"></div>
+                <div class="h-12 w-32 bg-on-surface-variant/20 rounded-md"></div>
+            </div>
+            <button
+                class="mt-20 text-primary font-bold border-b-2 border-primary/30 hover:border-primary transition-all pb-1 inline-flex items-center gap-2">
+                Quiero ser sponsor <span class="material-symbols-outlined text-lg"
+                    data-icon="handshake">handshake</span>
+            </button>
+        </div>
+    </section>
+    <!-- 7. Footer Section -->
+    <footer class="bg-surface-container-low pt-24 pb-12 px-6">
+        <div class="max-w-[1280px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
+                <div class="col-span-1 md:col-span-2 space-y-8">
+                    <div class="flex items-center gap-3 text-primary">
+                        <div class="w-10 h-10">
+                            <img src="LOGO2.png" alt="">
+                            <path clip-rule="evenodd"
+                                d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+                                fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h2 class="font-headline font-bold text-2xl tracking-tight text-white">SoundGarden</h2>
+                    </div>
+                    <p class="font-body text-on-surface-variant max-w-sm">
+                        Producción de eventos de música electrónica enfocada en el after. La conexión entre la música y
+                        el primer rayo de sol.
                     </p>
-<div class="flex gap-6">
-<a class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="#">
-<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
-</a>
-<a class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="#">
-<span class="material-symbols-outlined" data-icon="message">message</span>
-</a>
-</div>
-</div>
-<div class="space-y-6">
-<h3 class="font-headline font-bold text-white">Menú</h3>
-<ul class="space-y-4 text-on-surface-variant">
-<li><a class="hover:text-primary transition-colors" href="#">Qué es</a></li>
-<li><a class="hover:text-primary transition-colors" href="#experiencia">Experiencia</a></li>
-<li><a class="hover:text-primary transition-colors" href="#eventos">Eventos</a></li>
-<li><a class="hover:text-primary transition-colors" href="#comunidad">Comunidad</a></li>
-<li><a class="hover:text-primary transition-colors" href="#sponsors">Sponsors</a></li>
-</ul>
-</div>
-<div class="space-y-6">
-<h3 class="font-headline font-bold text-white">Contacto</h3>
-<ul class="space-y-4 text-on-surface-variant">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
-<span>Esperanza, Santa Fe<br/>Argentina</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
-<span>hola@soundgarden.com</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary" data-icon="chat">chat</span>
-<span>WhatsApp Support</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="sun-ray-divider mb-12"></div>
-<div class="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-on-surface-variant/60 font-medium">
-<p>© 2024 SoundGarden. Todos los derechos reservados.</p>
-<p class="italic text-primary/80">SoundGarden — donde todo comienza de nuevo</p>
-<div class="flex gap-8">
-<a class="hover:text-white transition-colors" href="#">Privacidad</a>
-<a class="hover:text-white transition-colors" href="#">Términos</a>
-</div>
-</div>
-</div>
-</footer>
-</body></html>
+                    <div class="flex gap-6">
+                        <a class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+                        </a>
+                        <a class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined" data-icon="message">message</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="font-headline font-bold text-white">Menú</h3>
+                    <ul class="space-y-4 text-on-surface-variant">
+                        <li><a class="hover:text-primary transition-colors" href="#">Qué es</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#experiencia">Experiencia</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#eventos">Eventos</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#comunidad">Comunidad</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#sponsors">Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="font-headline font-bold text-white">Contacto</h3>
+                    <ul class="space-y-4 text-on-surface-variant">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary"
+                                data-icon="location_on">location_on</span>
+                            <span>Esperanza, Santa Fe<br />Argentina</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+                            <span>hola@soundgarden.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="chat">chat</span>
+                            <span>WhatsApp Support</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sun-ray-divider mb-12"></div>
+            <div
+                class="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-on-surface-variant/60 font-medium">
+                <p>© 2026 SoundGarden. Todos los derechos reservados.</p>
+                <p class="italic text-primary/80">SoundGarden — donde todo comienza de nuevo</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-white transition-colors" href="#">Privacidad</a>
+                    <a class="hover:text-white transition-colors" href="#">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
